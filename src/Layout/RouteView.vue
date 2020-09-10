@@ -1,10 +1,13 @@
 <script>
 export default {
   name: 'RouteView',
+  data() {
+    return {
+    };
+  },
   render() {
     return (
       <keep-alive>
-        <div>666666666666</div>
         <router-view />
       </keep-alive>
     );

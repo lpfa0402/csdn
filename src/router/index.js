@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+// 布局容器
 const Container = () => import('@/Layout/Container');
+// router-view路由组件
 const RouteView = () => import('@/Layout/RouteView');
 const routes = [
   {
@@ -15,6 +17,11 @@ const routes = [
     name: 'home',
     component: Container,
     children: [
+      {
+        path: '',
+        name: 'Common',
+        component: () => import('@/views/testA.vue')
+      },
       {
         path: '/testA',
         redirect: '/testA',
