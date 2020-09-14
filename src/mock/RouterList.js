@@ -9,13 +9,20 @@ export default {
         {
           path: '/testA/testA',
           key: '/testA/testA',
-          title: '组件一',
+          title: '分组一',
+          children: [
+            {
+              path: '/testA/testA',
+              key: '/testA/testA',
+              title: '组件一',
+            },
+            {
+              path: '/testA/testB',
+              key: '/testA/testB',
+              title: '组件二',
+            }
+          ],
         },
-        {
-          path: '/testA/testB',
-          key: '/testA/testB',
-          title: '组件二',
-        }
       ]
     },
     {

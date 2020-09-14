@@ -4,6 +4,7 @@
     <el-scrollbar style="height: calc(100vh - 60px);" :wrapStyle="[{'overflow-x':'hidden'}]">
       <Menu
         @open="open"
+        :collapse="collapse"
       />
     </el-scrollbar>
   </div>
@@ -16,6 +17,12 @@ export default {
   components: {
     logo,
     Menu
+  },
+  props: {
+    collapse: {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     open(key, keyPath) {

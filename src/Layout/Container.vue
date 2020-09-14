@@ -1,10 +1,12 @@
 <template>
   <el-container class="l_container">
-    <el-aside width="200px">
-      <SideMenu/>
+    <el-aside style="transition: width 0.3s; overflow: visible;" :width="!this.collapse ? '200px' : '64px'">
+      <SideMenu :collapse="collapse"/>
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <HeaderMenu :collapse="collapse" :switchCollapse="this.switchCollapse"/>
+      </el-header>
       <el-main>
         <transition name="page-transition" mode="out-in">
           <router-view/>
@@ -15,9 +17,24 @@
 </template>
 <script>
 import SideMenu from './SideMenu/index'
+import HeaderMenu from './HeaderMenu/index'
 export default {
   name: 'Container',
-  components: {SideMenu}
+  components: {
+    SideMenu,
+    HeaderMenu
+  },
+  data() {
+    return {
+      collapse: false,
+    }
+  },
+  methods: {
+    switchCollapse(val) {
+      this.collapse = val
+      // 菜单收起测导航栏同步收起
+    }
+  }
 }
 </script>
 <style scoped>

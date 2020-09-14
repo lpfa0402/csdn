@@ -68,7 +68,7 @@ export default {
     }
     return (
       <div>
-        <el-menu style="width: 100%" {...MenuAttribute}>{this.createMenu(RouterList.data)}</el-menu>
+        <el-menu style="width: 100%; border:none" {...MenuAttribute}>{this.createMenu(RouterList.data)}</el-menu>
       </div>
     );
   },
