@@ -4,9 +4,11 @@
     <span class="l_collapse" @click="clickHandler">
       <i :class="[isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold']" />
     </span>
+    <Tabs/>
   </div>
 </template>
 <script>
+import Tabs from './Tabs'
 export default {
   name: 'HeaderMenu',
   props: {
@@ -19,7 +21,9 @@ export default {
       default: () => {}
     }
   },
-  components: {},
+  components: {
+    Tabs
+  },
   data() {
     return {
       isCollapse: this.collapse
@@ -41,6 +45,9 @@ export default {
   border-bottom: 1px solid #dedede;
   position: relative;
   z-index: 3;
+  display: flex;
+  align-items: center;
+
 }
 .l_collapse {
   display: inline-block;

@@ -16,9 +16,9 @@ export default {
   },
   methods: {
     change() {
-      let data = '测试vuex接收数据'
-      this.$store.dispatch('VuexTest', data)
-      console.log(this.list, '存到vuex内的数据')
+      // let data = '测试vuex接收数据'
+      // this.$store.dispatch('VuexTest', data)
+      // console.log(this.list, '存到vuex内的数据')
     }
   }
 }

@@ -25,14 +25,28 @@ const routes = [
       {
         path: '/testA',
         redirect: '/testA',
+        meta: {
+          title: '测试组件分组',
+          icon: 'el-icon-user-solid',
+          keepAlive: true
+        },
         component: RouteView,
         children: [
           { 
             path: '/testA/testA', 
+            meta: {
+              title: '组件一',
+              icon: 'el-icon-user-solid',
+              keepAlive: true
+            },
             component: () => import('@/views/testA.vue')
           },
           { 
             path: '/testA/testB', 
+            meta: {
+              title: '组件二',
+              icon: 'el-icon-user-solid',
+            },
             component: () => import('@/views/testB.vue')
           },
         ]
@@ -44,6 +58,11 @@ const routes = [
         children: [
           {
             path: '/testC',
+            meta: {
+              title: '组件三',
+              icon: 'el-icon-user-solid',
+              keepAlive: true
+            },
             component: () => import('@/views/testc.vue'),
           }
         ]

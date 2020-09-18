@@ -47,8 +47,8 @@ export default {
         }
       })
     },
-    open(key, keyPath) {
-      this.$emit('open', key, keyPath)
+    select(index, indexPath) {
+      this.$emit('select', index, indexPath)
     }
   },
   render() {
@@ -60,7 +60,7 @@ export default {
         collapse: this.collapse
       },
       on: {
-        open: this.open
+        select: this.select
       }
     }
     if (this.KeepAlive) {

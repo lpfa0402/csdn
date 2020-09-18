@@ -3,7 +3,7 @@
     <logo/>
     <el-scrollbar style="height: calc(100vh - 60px);" :wrapStyle="[{'overflow-x':'hidden'}]">
       <Menu
-        @open="open"
+        @select="select"
         :collapse="collapse"
       />
     </el-scrollbar>
@@ -25,8 +25,13 @@ export default {
     }
   },
   methods: {
-    open(key, keyPath) {
-      console.log(key, keyPath)
+    select(index) {
+      // 将路由路径存储到vuex内，提供给缓存使用
+      let data = {
+        key: index,
+        keepAlive: this.$route.meta.keepAlive
+      }
+      this.$store.dispatch('RoutingPathData', data)
     }
   }
 }

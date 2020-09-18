@@ -1,10 +1,11 @@
 <template>
   <div class="about">
     cccccccccccc
+    <input type="text">
   </div>
 </template>
 <script>
 export default {
-  name: 'testc',
+  name: 'testC',
 };
 </script>
