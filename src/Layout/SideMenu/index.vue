@@ -3,7 +3,6 @@
     <logo/>
     <el-scrollbar style="height: calc(100vh - 60px);" :wrapStyle="[{'overflow-x':'hidden'}]">
       <Menu
-        @select="select"
         :collapse="collapse"
       />
     </el-scrollbar>
@@ -24,13 +23,13 @@ export default {
       default: false
     }
   },
-  methods: {
-    select(index) {
-      // 将路由路径存储到vuex内，提供给缓存使用
+  watch: {
+    $route(key){
       let data = {
-        key: index,
-        keepAlive: this.$route.meta.keepAlive
-      }
+          key: key.fullPath,
+          keepAlive: key.meta.keepAlive,
+          title: key.meta.title
+        }
       this.$store.dispatch('RoutingPathData', data)
     }
   }
