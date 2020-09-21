@@ -8,7 +8,7 @@ export default {
   },
   created () {
     // 创建时获取当前路由，给缓存路由组件使用
-    console.log(this.$route, 'this.$route---------')
+    // console.log(this.$route, 'this.$route---------')
   },
   methods: {
     removeTab(targetName) {
