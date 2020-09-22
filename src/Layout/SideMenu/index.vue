@@ -26,7 +26,7 @@ export default {
   watch: {
     $route(key){
       let data = {
-          key: key.fullPath,
+          path: key.fullPath,
           keepAlive: key.meta.keepAlive,
           title: key.meta.title
         }

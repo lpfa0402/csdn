@@ -14,7 +14,7 @@ export default {
       let data = '';
       this.RoutingPathData.map((item, index) => {
         if (item.keepAlive && item.keepAlive == true) {
-          let itemdata = item.key.split('/')
+          let itemdata = item.path.split('/')
           if (index == this.RoutingPathData.length - 1) {
             data += itemdata[itemdata.length - 1]
           } else {
