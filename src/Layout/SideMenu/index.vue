@@ -30,7 +30,7 @@ export default {
           keepAlive: key.meta.keepAlive,
           title: key.meta.title
         }
-      this.$store.dispatch('RoutingPathData', data)
+      this.$store.dispatch('addRoutingPathData', data)
     }
   }
 }

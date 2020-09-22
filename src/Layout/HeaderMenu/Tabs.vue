@@ -19,7 +19,7 @@ export default {
         keepAlive: this.$route.meta.keepAlive,
         title: this.$route.meta.title
       }
-    this.$store.dispatch('RoutingPathData', data)
+    this.$store.dispatch('addRoutingPathData', data)
     this.activeKey = this.$route.fullPath
   },
   watch: {
