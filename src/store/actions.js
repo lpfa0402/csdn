@@ -3,15 +3,15 @@
 import {ADDROUTINGPATHDATA, REMOVEROUTINGPATHDATA, CLOSEROUTINGPATHDATA} from './mutation-types'
 export default {
   // 存储路由路径
-  addRoutingPathData ({commit}, data) {
-    commit(ADDROUTINGPATHDATA, {data})
+  addRoutingPathData ({commit}, params) {
+    commit(ADDROUTINGPATHDATA, {params})
   },
   // 删除路由路径
-  removeRoutingPathData ({commit}, data) {
-    commit(REMOVEROUTINGPATHDATA, {data})
+  removeRoutingPathData ({commit}, params) {
+    commit(REMOVEROUTINGPATHDATA, {params})
   },
   // 批量删除路由路径
-  CloseRoutingPathData({commit}, data) {
-    commit(CLOSEROUTINGPATHDATA, {data})
+  CloseRoutingPathData({commit}, params) {
+    commit(CLOSEROUTINGPATHDATA, {params})
   }
 }
